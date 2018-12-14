@@ -1,0 +1,47 @@
+http://www.saedsayad.com/decision_tree.htm
+http://www.datasciencecentral.com/profiles/blogs/15-great-articles-about-decision-trees
+https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/
+
+Decision tree is a non-linear model
+
+Divide & Conquer approach - Tree-like graph/Flowchart
+The topmost decision node in a tree which corresponds to the best predictor called root node.
+
+For nominal attributes, the number of children is usually equal to the number of possible values for the attribute. Hence, it is tested only once
+For Numerical attributes, we usually test if the attribute value is greater or less than a determined constant. The attribute may get tested several times for different constants.
+Splitting is based on the attribute that produces the 'purest' subsets of data w.r.t the label attribute. A partition is pure if all the tuples in it belong to the same class
+
+
+Issues in Decision Trees: 
+     Binning - http://www.saedsayad.com/binning.htm - reduce noise, easy identification of outliers, invalid and missing values of numerical variables
+               1) http://www.saedsayad.com/unsupervised_binning.htm - Do not use target class info during Binning
+                    Equal width binning - k is no of intervals
+                    w = (max-min)/k
+                    Interval boundaries are - min+w, min+2w, ... , min+(k-1)w
+                    R: https://stackoverflow.com/questions/42037740/equal-frequency-and-equal-width-binning-in-r
+                       dataset <- c(0, 4, 12, 16, 16, 18, 24, 26, 28)
+                       library(classInt)
+                       classIntervals(dataset, 4)
+                       x <- classIntervals(dataset, 4, style = 'equal')
+
+                    Equal Freq - 
+                    R: https://stackoverflow.com/questions/42037740/equal-frequency-and-equal-width-binning-in-r
+                       y <- classIntervals(dataset, 4, style = 'quantile')
+                       (or)
+                       library(Hmisc)
+                       table(cut2(dataset, m = length(dataset)/4))
+                       
+               2) http://www.saedsayad.com/supervised_binning.htm - 
+                    Entropy based binning
+                    discretization::cutPoints(Numeric variable to be binned, Target class variable)
+                                  
+     Overfitting - Pruning (Stop growing the tree so that it doesn't classify training set perfectly)          
+         http://www.saedsayad.com/decision_tree_overfitting.htm
+         R: http://www.statmethods.net/advstats/cart.html
+         
+
+
+Probabilistic Classification - Refers to a scenario where the model predicts a probability distribution over the classes, instead of predicting the most likely class. So the model outputs Y are probability vectors. Provides clasification with a degree of certainity
+
+Decision Trees are not naturally probabilistic (), they produce distorted class probability distributions. They produce proportions
+
