@@ -4,7 +4,7 @@ library("NbClust", lib.loc="~/R/win-library/3.3")
 library("fpc", lib.loc="~/R/win-library/3.3")
 
 # Import Data
-Diabetes <- read.csv("C:/Users/Sandhya/OneDrive/Full Time 2016/Projects/Clustering/Diabetics.csv")
+Diabetes <- read.csv("./Projects/Clustering/Diabetics.csv")
 
 # Exploratory data analysis
 names(Diabetes)
