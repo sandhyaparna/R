@@ -1,13 +1,13 @@
 options(scipen = 999)
 
-# Train <- read.csv("C:/Users/spashikanti/Downloads/train_users_2.csv")
+# Train <- read.csv("./train_users_2.csv")
 
-Train <-read.csv("C:/Users/Sandhya/OneDrive/Data Science Practical Learning/Projects/Airbnb New User Bookings/Data/train_users_2.csv")
-Test <- read.csv("C:/Users/Sandhya/OneDrive/Data Science Practical Learning/Projects/Airbnb New User Bookings/Data/test_users.csv")
+Train <-read.csv("./Projects/Airbnb New User Bookings/Data/train_users_2.csv")
+Test <- read.csv("./Projects/Airbnb New User Bookings/Data/test_users.csv")
 Test$country_destination <- NA
-sessions <- read.csv("C:/Users/Sandhya/OneDrive/Data Science Practical Learning/Projects/Airbnb New User Bookings/Data/sessions.csv")
-age_gender_bkts <- read.csv("C:/Users/Sandhya/OneDrive/Data Science Practical Learning/Projects/Airbnb New User Bookings/Data/age_gender_bkts.csv")
-countries <- read.csv("C:/Users/Sandhya/OneDrive/Data Science Practical Learning/Projects/Airbnb New User Bookings/Data/countries.csv")
+sessions <- read.csv("./Projects/Airbnb New User Bookings/Data/sessions.csv")
+age_gender_bkts <- read.csv("./Projects/Airbnb New User Bookings/Data/age_gender_bkts.csv")
+countries <- read.csv("./Projects/Airbnb New User Bookings/Data/countries.csv")
 
 
 #Data pre-processing is done after combining test and train
